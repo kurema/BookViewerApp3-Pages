@@ -7,6 +7,11 @@
     <meta name="Description" content="Windows 10向けの洗練された読書アプリ。" />
     <link rel="stylesheet" href="ringo.css" />
     <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
         a:link,
         a:visited,
         .link:link,
@@ -59,7 +64,7 @@
             box-sizing: content-box;
         }
 
-        #ac-globalnav .ac-gn-item {
+        #ac-globalnav .ac-gn-list li {
             box-sizing: border-box;
             display: inline-block;
             position: relative;
@@ -70,36 +75,137 @@
             box-sizing: content-box;
         }
 
-        #ac-globalnav .ac-gn-item a {
+        #ac-globalnav .ac-gn-list li a {
             display: inline-block;
             line-height: 22px;
             white-space: nowrap;
 
             color: white;
-            opacity:0.85;
+            opacity: 0.85;
         }
 
-        #ac-globalnav .ac-gn-item.selected a{
-            opacity:0.6;
+        #ac-globalnav .ac-gn-list li.selected a {
+            opacity: 0.6;
         }
 
-        #ac-globalnav .ac-gn-item a:hover {
+        #ac-globalnav .ac-gn-list li a:hover {
             opacity: 1.0;
         }
-</style>
+
+        #ac-localnav {
+            position: relative;
+            top: 44px;
+            left: 0;
+            width: 100%;
+            height: 52px;
+            min-width: 1024px;
+            z-index: 9997;
+        }
+
+        #ac-localnav {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-bottom: rgba(30, 30, 30, 0.8) solid 2px;
+        }
+
+        #ac-localnav.ac-localnav-dark {
+            background-color: rgba(30, 30, 30, 0.9);
+            border-bottom: rgba(255, 255, 255, 0.8) solid 2px;
+        }
+
+        #ac-localnav,
+        #ac-localnav * {
+            box-sizing: content-box;
+            margin: 0;
+            padding: 0;
+            pointer-events: auto;
+            letter-spacing: normal;
+        }
+
+        #ac-localnav.css-sticky {
+            position: sticky;
+            top: 0;
+        }
+
+
+        #ac-localnav .ac-ln-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            min-height: 100%;
+        }
+
+        #ac-localnav .ac-ln-content {
+            margin: 0 auto;
+            max-width: 980px;
+            padding: 0 22px;
+            z-index: 2;
+        }
+
+        #ac-localnav .ac-ln-title {
+            margin: 12px 0;
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+            opacity: 0.95;
+
+            cursor: default;
+display: block;
+float: left;
+        }
+
+        #ac-localnav .ac-ln-menu {
+            font-size: 12px;
+            line-height: 1;
+            font-weight: 400;
+            letter-spacing: -.01em;
+            font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            float: right;
+            margin-top: -3px;
+
+            padding-top: 18px;
+        }
+    </style>
 </head>
 
 <body>
+    <script>
+        document.body.onscroll = scrollManager;
+        function scrollManager(e) {
+            var localnav = document.getElementById("ac-localnav");
+            if (window.pageYOffset < 44) {
+                if (localnav.classList.contains("css-sticky")) localnav.classList.remove("css-sticky");
+            } else {
+                if (!localnav.classList.contains("css-sticky")) localnav.classList.add("css-sticky");
+            }
+        }
+    </script>
+
     <nav id="ac-globalnav">
         <div class="ac-gn-content">
             <ul class="ac-gn-list">
-                <li class="ac-gn-item"><a href="https://github.com/kurema/">GitHub</a></li>
-                <li class="ac-gn-item"><a href="https://www.amazon.co.jp/-/e/B077X71C4C/tag=kurema05-22">Kindle</a></li>
-                <li class="ac-gn-item"><a href="https://twitter.com/kurema_makoto/">Twitter</a></li>
-                <li class="ac-gn-item"><a href="https://www.amazon.co.jp/registry/wishlist/2V4H9YB1CV3PV/tag=kurema05-22">欲しいものリスト</a></li>
+                <li><a href="https://github.com/kurema/">GitHub</a></li>
+                <li><a href="https://www.amazon.co.jp/-/e/B077X71C4C/tag=kurema05-22">Kindle</a></li>
+                <li><a href="https://twitter.com/kurema_makoto/">Twitter</a></li>
+                <li><a href="https://www.amazon.co.jp/registry/wishlist/2V4H9YB1CV3PV/tag=kurema05-22">欲しいものリスト</a></li>
             </ul>
         </div>
     </nav>
+    <nav id="ac-localnav" class="ac-localnav-dark">
+        <div class="ac-ln-wrapper">
+            <div class="ac-ln-content">
+                <div class="ac-ln-title">BookViewer 3</div>
+                <div class="ac-ln-menu">
+                    hi!
+                </div>
+                    </div>
+        </div>
+    </nav>
+    <main>
+        <p>hi1<br />hi2<br />hi<br />hi<br />hi<br />hi<br />hi3<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />
+        </p>
+    </main>
 </body>
 
 </html>
