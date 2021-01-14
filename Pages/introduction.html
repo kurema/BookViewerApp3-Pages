@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <link rel="stylesheet" href="ringo.css" />
     <style>
-:root{
-    --globalnav-height: 44px;
-    --localnav-height: 52px;
-    --localnav-border-height: 1px;
-}
+        :root {
+            --globalnav-height: 44px;
+            --localnav-height: 52px;
+            --localnav-border-height: 1px;
+        }
 
         body {
             padding: 0;
@@ -35,7 +35,7 @@
             display: block;
             margin: 0;
             width: 100%;
-            min-width: 1024px;
+            /* min-width: 1024px; */
             height: var(--globalnav-height);
             max-height: var(--globalnav-height);
             background: rgba(0, 0, 0, 0.92);
@@ -105,8 +105,12 @@
             left: 0;
             width: 100%;
             height: var(--localnav-height);
-            min-width: 1024px;
             z-index: 9997;
+            margin: 0;
+            /* overflow: hidden; */
+
+            padding-left: calc(max(22px, env(safe-area-inset-left)));
+            padding-right: calc(max(22px, env(safe-area-inset-right)))
         }
 
         #ac-localnav {
@@ -139,12 +143,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: auto;
-            min-height: 100%;
-
             height: var(--localnav-height);
-            padding-left: calc(max(22px, env(safe-area-inset-left)));
-            padding-right: calc(max(22px, env(safe-area-inset-right)))
         }
 
         #ac-localnav .ac-ln-content {
@@ -158,7 +157,6 @@
 
         #ac-localnav .ac-ln-title {
             margin: 12px 0;
-            color: white;
             font-weight: 700;
             font-size: 20px;
             opacity: 0.95;
@@ -166,6 +164,12 @@
             cursor: default;
             display: block;
             float: left;
+
+            color: black;
+        }
+
+        #ac-localnav.ac-localnav-dark .ac-ln-title {
+            color: white;
         }
 
         #ac-localnav .ac-ln-menu {
@@ -187,7 +191,10 @@
             margin-left: 24px;
             float: left;
             list-style: none;
+            color: black;
+        }
 
+        #ac-localnav.ac-localnav-dark .ac-ln-list li {
             color: white;
         }
 
@@ -221,16 +228,51 @@
 
         main {
             display: block;
-            margin:0;
-            padding:0;
+            margin: 0;
+            padding: 0;
             /* position: absolute;
             width: 100%;
             top: 0; */
         }
 
-        main section{
-            margin-top:-53px;
-            padding:0;
+        main section.section-hero {
+            margin-top: calc(-1 * (var(--localnav-height) + var(--localnav-border-height)));
+            margin-bottom: calc(-1 * (var(--localnav-height) + var(--localnav-border-height)));
+            padding: 0;
+            /* background: radial-gradient(circle, #217 0%, #050540 80%); */
+            background: radial-gradient(circle, #271 0%, #054005 80%);
+            text-align: center;
+            padding-bottom: 80px;
+        }
+
+        main section.section-hero img.section-hero-superhero {
+            max-width: min(920px, 90vw);
+            margin: 200px auto 80px auto;
+        }
+
+        main section.section-hero .intro-text {
+            color: white;
+            filter: drop-shadow(0 0 10px rgba(0, 0, 0, 80%));
+        }
+
+        main section.section-hero .intro-text h2 {
+            font-size: min(28px, 5.5vw);
+        }
+
+        main section.section-hero .intro-text h1 {
+            font-size: min(80px, 11vw);
+            margin-top: 27px;
+            margin-bottom: 0;
+        }
+
+        main section.section-hero .intro-text .intro-text-body {
+            font-size: min(28px, 5.5vw);
+            margin: 20px 0 29px;
+        }
+
+        main section.section-hero .intro-text .intro-text-download-link a {
+            color: #29ff97;
+            font-size: min(28px, 5.5vw);;
         }
     </style>
 </head>
@@ -274,11 +316,19 @@
         </div>
     </nav>
     <main>
-        <section style="height:100vh;background: radial-gradient(circle, #217 0%, #050540 80%);">
-
+        <section class="section-hero">
+            <div>
+                <img class="section-hero-superhero" src="img/superhero.webp" />
+            </div>
+            <div class="intro-text">
+                <h2>BookViewer 3</h2>
+                <h1>最先端の読書体験を<br />美しいUIで</h1>
+                <p class="intro-text-body">漫画を読むにもどうのこうの<br />そんなに書くこともないが。</p>
+                <p class="intro-text-download-link">
+                    <a href="https://www.microsoft.com/store/apps/9N607JHLBCZB">今すぐダウンロード ></a>
+                </p>
+            </div>
         </section>
-        <p>hi1<br />hi2<br />hi<br />hi<br />hi<br />hi<br />hi3<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />
-        </p>
     </main>
 </body>
 
