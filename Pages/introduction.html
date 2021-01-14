@@ -5,8 +5,15 @@
     <meta charset="utf-8" />
     <title>BookViewer 3 - kurema</title>
     <meta name="Description" content="Windows 10向けの洗練された読書アプリ。" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <link rel="stylesheet" href="ringo.css" />
     <style>
+:root{
+    --globalnav-height: 44px;
+    --localnav-height: 52px;
+    --localnav-border-height: 1px;
+}
+
         body {
             padding: 0;
             margin: 0;
@@ -29,8 +36,8 @@
             margin: 0;
             width: 100%;
             min-width: 1024px;
-            height: 48px;
-            max-height: 44px;
+            height: var(--globalnav-height);
+            max-height: var(--globalnav-height);
             background: rgba(0, 0, 0, 0.92);
             font-size: 15px;
             user-select: none;
@@ -51,7 +58,7 @@
             cursor: default;
             margin: 10px 0;
             width: auto;
-            height: 44px;
+            height: var(--globalnav-height);
             display: flex;
             justify-content: space-between;
             user-select: none;
@@ -68,7 +75,7 @@
             box-sizing: border-box;
             display: inline-block;
             position: relative;
-            height: 44px;
+            height: var(--globalnav-height);
             z-index: 1;
             vertical-align: top;
 
@@ -94,22 +101,22 @@
 
         #ac-localnav {
             position: relative;
-            top: 44px;
+            top: var(--globalnav-height);
             left: 0;
             width: 100%;
-            height: 52px;
+            height: var(--localnav-height);
             min-width: 1024px;
             z-index: 9997;
         }
 
         #ac-localnav {
             background-color: rgba(255, 255, 255, 0.9);
-            border-bottom: rgba(30, 30, 30, 0.8) solid 2px;
+            border-bottom: rgba(30, 30, 30, 0.4) solid 1px;
         }
 
         #ac-localnav.ac-localnav-dark {
             background-color: rgba(30, 30, 30, 0.9);
-            border-bottom: rgba(255, 255, 255, 0.8) solid 2px;
+            border-bottom: rgba(255, 255, 255, 0.4) solid 1px;
         }
 
         #ac-localnav,
@@ -134,6 +141,10 @@
             width: 100%;
             height: auto;
             min-height: 100%;
+
+            height: var(--localnav-height);
+            padding-left: calc(max(22px, env(safe-area-inset-left)));
+            padding-right: calc(max(22px, env(safe-area-inset-right)))
         }
 
         #ac-localnav .ac-ln-content {
@@ -141,6 +152,8 @@
             max-width: 980px;
             padding: 0 22px;
             z-index: 2;
+            position: relative;
+
         }
 
         #ac-localnav .ac-ln-title {
@@ -151,20 +164,73 @@
             opacity: 0.95;
 
             cursor: default;
-display: block;
-float: left;
+            display: block;
+            float: left;
         }
 
         #ac-localnav .ac-ln-menu {
-            font-size: 12px;
+            font-size: 13px;
             line-height: 1;
-            font-weight: 400;
+            font-weight: 600;
             letter-spacing: -.01em;
-            font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
             float: right;
-            margin-top: -3px;
+            margin-top: 2px;
 
             padding-top: 18px;
+        }
+
+        #ac-localnav .ac-ln-list {
+            list-style: none;
+        }
+
+        #ac-localnav .ac-ln-list li {
+            margin-left: 24px;
+            float: left;
+            list-style: none;
+
+            color: white;
+        }
+
+        #ac-localnav .ac-ln-menu * {
+            display: inline;
+        }
+
+        #ac-localnav .ac-ln-action {
+            margin-left: 20px;
+            float: left;
+        }
+
+        #ac-localnav .ac-ln-action a {
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            white-space: nowrap;
+            background: #0071e3;
+            color: #fff;
+            font-size: 12px;
+            line-height: 1.33337;
+            font-weight: 400;
+            min-width: 23px;
+            padding-left: 11px;
+            padding-right: 11px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            border-radius: 12px;
+            margin-top: -6px;
+        }
+
+        main {
+            display: block;
+            margin:0;
+            padding:0;
+            /* position: absolute;
+            width: 100%;
+            top: 0; */
+        }
+
+        main section{
+            margin-top:-53px;
+            padding:0;
         }
     </style>
 </head>
@@ -181,7 +247,6 @@ float: left;
             }
         }
     </script>
-
     <nav id="ac-globalnav">
         <div class="ac-gn-content">
             <ul class="ac-gn-list">
@@ -197,12 +262,21 @@ float: left;
             <div class="ac-ln-content">
                 <div class="ac-ln-title">BookViewer 3</div>
                 <div class="ac-ln-menu">
-                    hi!
-                </div>
+                    <ul class="ac-ln-list">
+                        <li>概要</li>
+                        <li>チュートリアル</li>
+                    </ul>
+                    <div class="ac-ln-action">
+                        <a class="button" href="https://www.microsoft.com/store/apps/9N607JHLBCZB">今すぐダウンロード</a>
                     </div>
+                </div>
+            </div>
         </div>
     </nav>
     <main>
+        <section style="height:100vh;background: radial-gradient(circle, #217 0%, #050540 80%);">
+
+        </section>
         <p>hi1<br />hi2<br />hi<br />hi<br />hi<br />hi<br />hi3<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />hi<br />
         </p>
     </main>
