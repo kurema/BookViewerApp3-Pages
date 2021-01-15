@@ -12,6 +12,9 @@
             --globalnav-height: 44px;
             --localnav-height: 52px;
             --localnav-border-height: 1px;
+            --grid-gutter: 25px;
+            --card-border-radius: 30px;
+            --card-padding: 40px;
         }
 
         html {
@@ -21,7 +24,7 @@
 
         [lang]:lang(ja) {
             font-family: "游ゴシック", "游ゴシック体", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "ヒラギノ角ゴ Pro W3", "SF Pro JP", "SF Pro Text", "SF Pro Icons", "Hiragino Kaku Gothic Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-            quotes:"「" "」";
+            quotes: "「""」";
         }
 
         body {
@@ -288,7 +291,7 @@
         main .section-info-1 {
             margin-top: calc(var(--localnav-height) + var(--localnav-border-height));
             background: radial-gradient(circle, #fff, #ddd);
-            padding-bottom:60px;
+            padding-bottom: 60px;
         }
 
         main .section-info-1-header {
@@ -315,11 +318,58 @@
             letter-spacing: .009em;
         }
 
-        main .section-info-1-youtube{
+        main .section-info-1-youtube {
             margin-left: auto;
             margin-right: auto;
             text-align: center;
-            margin-top:60px;
+            margin-top: 60px;
+        }
+
+        .grid-container {
+            max-width: min(1440px, 100%);
+            display: grid;
+            grid-gap: var(--grid-gutter);
+            padding: 0 var(--grid-gutter);
+            margin: var(--grid-gutter) auto;
+            grid-template-columns: repeat(12, 1fr);
+            box-sizing: border-box;
+        }
+
+        .grid-card {
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            position: relative;
+            box-sizing: border-box;
+            overflow: hidden;
+            background-color: #fff;
+            border-radius: var(--card-border-radius);
+            min-height: 780px;
+            padding: var(--card-padding);
+        }
+
+        .grid-card h3 {
+            color: #0e90db;
+            font-size: min(21px, 4.2vw);
+            font-weight: 600;
+            letter-spacing: .011em;
+            margin-top:0;
+            margin-bottom:5px;
+        }
+
+        .grid-card p{
+            color:black;
+            font-size: min(16.5px, 3.4vw);
+            font-weight: 800;
+            margin-top:5px;
+        }
+
+        .grid-card p a{
+            color: #0e90db;
+        }
+        .grid-card p a::after{
+            content: " >";
         }
     </style>
 </head>
@@ -383,7 +433,7 @@
         </section>
         <article class="section-info-1">
             <header class="section-info-1-header">
-                <h2>UWPの力を最大限に</h2>
+                <h2>Windows 10で本を読もう</h2>
                 <p>読書をするならWindows 10が圧倒的！<br />
                     それはこのアプリがあるからです。<br />
                     UWPの力を最大限活かした最高のアプリがここに。
@@ -391,10 +441,36 @@
 
             </header>
             <div class="section-info-1-youtube">
-                <iframe width="980" height="551" src="https://www.youtube.com/embed/rKCw_OlOKb8?autoplay=1&mute=1&loop=1&playlist=rKCw_OlOKb8"
+                <iframe width="980" height="551"
+                    src="https://www.youtube.com/embed/rKCw_OlOKb8?autoplay=1&mute=1&loop=1&playlist=rKCw_OlOKb8"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
+            </div>
+            <div class="grid-container">
+                <section class="grid-card" style="grid-column:span 6;">
+                    <h3>オープンソース</h3>
+                    <p>BookViewer 3はオープンソースで開発されています。<br />
+                        フォークもプルリクエストもスポンサー契約だって自由自在。<br />
+                        まずはスターしてみましょう。
+                    </p>
+                    <p><a href="https://github.com/kurema/BookViewerApp3">GitHubで開く</a></p>
+                    <img style="width:100%;max-height:400px;object-fit:cover;object-position: top;" src="img/github-screenshot.webp"/>
+                    <img style="width:20%;margin-left:auto;margin-right:auto;margin-top:30px;" src="img/License_icon-mit.svg"/>
+                </section>
+                <section class="grid-card" style="grid-column:span 6;">
+                    <h3>支援</h3>
+                    <p>BookViewer 3は完全に無料です。<br />
+                        広告・有料機能などはありません。<br />
+                        開発は皆様の支援に支えられています。
+                    </p>
+                    <p>ご支援はアプリ内購入・GitHub Sponsors・ほしい物リスト・Kindle書籍など多チャンネルで受け付けています。<br />
+                        スターやフォローも歓迎しています。
+                    </p>
+                    <p><a href="https://github.com/sponsors/kurema">GitHub Sponsors</a></p>
+                    <p><a href="https://www.amazon.co.jp/registry/wishlist/2V4H9YB1CV3PV/tag=kurema05-22">ほしい物リスト</a></p>
+                    <p><a href="https://www.amazon.co.jp/-/e/B077X71C4C/ref=as_li_ss_tl?ie=UTF8&linkCode=sl2&tag=kurema05-22&linkId=7343345101dc6c2425cd68795f841b3d">Kindle購入</a></p>
+                </section>
             </div>
         </article>
     </main>
