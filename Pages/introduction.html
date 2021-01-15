@@ -14,6 +14,16 @@
             --localnav-border-height: 1px;
         }
 
+        html {
+            font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            quotes: "“""”";
+        }
+
+        [lang]:lang(ja) {
+            font-family: "游ゴシック", "游ゴシック体", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "ヒラギノ角ゴ Pro W3", "SF Pro JP", "SF Pro Text", "SF Pro Icons", "Hiragino Kaku Gothic Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            quotes:"「" "」";
+        }
+
         body {
             padding: 0;
             margin: 0;
@@ -272,12 +282,49 @@
 
         main section.section-hero .intro-text .intro-text-download-link a {
             color: #29ff97;
-            font-size: min(28px, 5.5vw);;
+            font-size: min(28px, 5.5vw);
+        }
+
+        main .section-info-1 {
+            margin-top: calc(var(--localnav-height) + var(--localnav-border-height));
+            background: radial-gradient(circle, #fff, #ddd);
+            padding-bottom:60px;
+        }
+
+        main .section-info-1-header {
+            padding-top: 140px;
+            max-width: 980px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        main .section-info-1-header h2 {
+            color: #622aff;
+            background: radial-gradient(circle, #62f, #318);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            font-size: min(64px, 9vw);
+            font-weight: 600;
+            margin: 0;
+        }
+
+        main .section-info-1-header p {
+            font-size: min(24px, 5vw);
+            font-weight: 600;
+            letter-spacing: .009em;
+        }
+
+        main .section-info-1-youtube{
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            margin-top:60px;
         }
     </style>
 </head>
 
-<body>
+<body lang="ja">
     <script>
         document.body.onscroll = scrollManager;
         function scrollManager(e) {
@@ -309,7 +356,7 @@
                         <li>チュートリアル</li>
                     </ul>
                     <div class="ac-ln-action">
-                        <a class="button" href="https://www.microsoft.com/store/apps/9N607JHLBCZB">今すぐダウンロード</a>
+                        <a class="button" href="https://www.microsoft.com/store/apps/9N607JHLBCZB">今すぐ入手</a>
                     </div>
                 </div>
             </div>
@@ -322,13 +369,34 @@
             </div>
             <div class="intro-text">
                 <h2>BookViewer 3</h2>
-                <h1>最先端の読書体験を<br />美しいUIで</h1>
-                <p class="intro-text-body">漫画を読むにもどうのこうの<br />そんなに書くこともないが。</p>
+                <h1>最高の読書体験を<br />美しいUIで</h1>
+                <p class="intro-text-body">
+                    漫画を読むにも小説を読むにも最適のビュワーアプリ。<br />
+                    Windowsで最高の読書体験を得るにはBookViewer 3をお試しください。<br />
+                    Fluent Designを採用した美しい画面で、本を読みましょう。<br />
+                    オープンソースなので安心です。
+                </p>
                 <p class="intro-text-download-link">
-                    <a href="https://www.microsoft.com/store/apps/9N607JHLBCZB">今すぐダウンロード ></a>
+                    <a href="https://www.microsoft.com/store/apps/9N607JHLBCZB">今すぐインストール ></a>
                 </p>
             </div>
         </section>
+        <article class="section-info-1">
+            <header class="section-info-1-header">
+                <h2>UWPの力を最大限に</h2>
+                <p>読書をするならWindows 10が圧倒的！<br />
+                    それはこのアプリがあるからです。<br />
+                    UWPの力を最大限活かした最高のアプリがここに。
+                </p>
+
+            </header>
+            <div class="section-info-1-youtube">
+                <iframe width="980" height="551" src="https://www.youtube.com/embed/rKCw_OlOKb8?autoplay=1&mute=1&loop=1&playlist=rKCw_OlOKb8"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </article>
     </main>
 </body>
 
