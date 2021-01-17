@@ -306,6 +306,7 @@
             color: #622aff;
             background: radial-gradient(circle, #62f, #318);
             background-clip: text;
+            -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
 
             font-size: min(64px, calc(64 * var(--vw-per-px)));
@@ -370,6 +371,22 @@
             color: #0e90db;
         }
 
+        .grid-card.card-blue {
+            background: linear-gradient(150deg, #39d 10%, #87f 100%);
+        }
+
+        .grid-card.card-blue h3 {
+            color: white;
+        }
+
+        .grid-card.card-blue p {
+            color: white;
+        }
+
+        .grid-card.card-blue p  a {
+            color: white;
+        }
+
         .grid-card p a::after {
             content: " >";
         }
@@ -389,7 +406,7 @@
             padding-right: calc(max(22px, env(safe-area-inset-right)));
             max-width: 980px;
             margin-right: auto;
-            margin-left:auto;
+            margin-left: auto;
         }
 
         #ac-globalfooter .ac-gf-directory {
@@ -398,9 +415,8 @@
         }
 
         #ac-globalfooter .ac-gf-directory-column {
-            margin-top:30px;
-
-            flex-basis: 20%;
+            margin-top: 30px;
+            flex-basis: 25%;
             font-size: 12px;
         }
 
@@ -415,7 +431,7 @@
             padding: 0;
         }
 
-        #ac-globalfooter .ac-gf-directory-column ul li{
+        #ac-globalfooter .ac-gf-directory-column ul li {
             margin-bottom: .8em;
         }
 
@@ -429,7 +445,7 @@
             width: 100%;
             max-height: 400px;
             object-fit: cover;
-            animation: card-github-img-animation 8s ease 0s infinite normal both running;
+            animation: card-github-img-animation 8s cubic-bezier(0.2, 0, 1, 0.5) 0s infinite normal both running;
         }
 
         @keyframes card-github-img-animation {
@@ -437,8 +453,12 @@
                 object-position: top;
             }
 
-            40% {
+            50% {
                 object-position: top;
+            }
+
+            70% {
+                object-position: bottom;
             }
 
             90% {
@@ -498,9 +518,9 @@
         <div class="ac-gn-content">
             <ul class="ac-gn-list">
                 <li><a href="https://github.com/kurema/">GitHub</a></li>
-                <li><a href="https://www.amazon.co.jp/-/e/B077X71C4C/tag=kurema05-22">Kindle</a></li>
                 <li><a href="https://twitter.com/kurema_makoto/">Twitter</a></li>
-                <li><a href="https://www.amazon.co.jp/registry/wishlist/2V4H9YB1CV3PV/tag=kurema05-22">欲しいものリスト</a></li>
+                <li><a href="https://qiita.com/kurema/">Qiita</a></li>
+                <li><a href="https://www.amazon.co.jp/-/e/B077X71C4C/tag=kurema05-22">Kindle</a></li>
             </ul>
         </div>
     </nav>
@@ -563,7 +583,7 @@
                         まずはスターしてみましょう。
                     </p>
                     <p><a href="https://github.com/kurema/BookViewerApp3">GitHubで開く</a></p>
-                    <img id="card-github-img" src="img/github-screenshot.webp" />
+                    <img id="card-github-img" src="img/github-screenshot-full.webp" />
                     <!-- <img style="width:20%;margin-left:auto;margin-right:auto;margin-top:30px;" src="img/License_icon-mit.svg"/> -->
                 </section>
                 <section class="grid-card" style="grid-column:span 6;">
@@ -572,7 +592,7 @@
                         広告・有料機能はありません。<br />
                         開発は皆様の支援に支えられています。
                     </p>
-                    <p>ご支援はアプリ内購入・GitHub Sponsors・ほしい物リスト・Kindle書籍・アフィリエイトで受け付けています。<br />
+                    <p>ご支援はアプリ内購入・GitHub Sponsors・ほしい物リスト・Kindle書籍・アフィリエイト・暗号資産で受け付けています。<br />
                         スターやフォローも歓迎しています。
                     </p>
                     <p><a href="https://github.com/sponsors/kurema">GitHub Sponsors</a></p>
@@ -581,6 +601,9 @@
                     <p>
                         <a
                             href="https://www.amazon.co.jp/-/e/B077X71C4C/ref=as_li_ss_tl?ie=UTF8&linkCode=sl2&tag=kurema05-22&linkId=7343345101dc6c2425cd68795f841b3d">Kindle購入</a>
+                    </p>
+                    <p><a
+                            href="https://github.com/kurema/kurema/blob/master/introduction.ja-jp.md#cryptocurrency">暗号資産</a>
                     </p>
                     <div id="card-support-icon">🎁</div>
                 </section>
@@ -591,19 +614,75 @@
         <div class="ac-gf-content">
             <nav class="ac-gf-directory">
                 <div class="ac-gf-directory-column">
-                    <h3>アプリ</h3>
+                    <h3>Microsoft Store</h3>
                     <ul>
                         <li><a href="https://www.microsoft.com/ja-jp/p/bookviewer3/9n607jhlbczb">BookViewer 3</a></li>
-                        <li><a href="https://www.microsoft.com/ja-jp/p/bookviewer/9nblggh5n200">BookViewer Classic</a></li>
-                        <li><a href="https://www.microsoft.com/ja-jp/p/nicoch-client/9pfmpftfx4w6">Nicoch Client</a></li>
-                        <li><a href="https://play.google.com/store/apps/details?id=com.github.kurema.WordbookImpressApp">モバイル単語帳</a></li>
+                        <li><a href="https://www.microsoft.com/ja-jp/p/bookviewer/9nblggh5n200">BookViewer Classic</a>
+                        </li>
+                        <li><a href="https://www.microsoft.com/ja-jp/p/nicoch-client/9pfmpftfx4w6">Nicoch Client</a>
+                        </li>
+                    </ul>
+                    <h3>Android </h3>
+                    <ul>
+                        <li><a
+                                href="https://play.google.com/store/apps/details?id=com.github.kurema.BDVideoLibraryManager">BD録画管理</a>
+                        </li>
+                        <li><a
+                                href="https://play.google.com/store/apps/details?id=com.github.kurema.WordbookImpressApp">モバイル単語帳</a>
+                        </li>
                     </ul>
                     <h3>Docker</h3>
                     <ul>
-                        <li><a href="https://github.com/users/kurema/packages/container/package/nicochcgi%2Fnicochcgi">nicochcgi</a></li>
-                        <li><a href="https://github.com/users/kurema/packages/container/package/letmesee">letmesee (フォーク版)</a></li>
+                        <li><a
+                                href="https://github.com/users/kurema/packages/container/package/nicochcgi%2Fnicochcgi">nicochcgi</a>
+                        </li>
+                        <li><a href="https://github.com/users/kurema/packages/container/package/letmesee">letmesee
+                                (フォーク)</a></li>
                     </ul>
-
+                </div>
+                <div class="ac-gf-directory-column">
+                    <h3>GitHub</h3>
+                    <ul>
+                        <li><a href="https://github.com/kurema/">ユーザーページ</a></li>
+                        <li><a href="https://github.com/kurema/BookViewerApp3">BookViewer 3</a></li>
+                        <li><a href="https://github.com/kurema/BookViewerApp">BookViewer Classic</a></li>
+                        <li><a href="https://github.com/kurema/NicochViewerUWP">Nicoch Client</a></li>
+                        <li><a href="https://github.com/kurema/BDVideoLibraryManager">BD録画管理</a></li>
+                        <li><a href="https://github.com/kurema/WordbookImpressApp/">モバイル単語帳</a></li>
+                        <li><a href="https://github.com/kurema/nicochcgi_docker">nicochcgi</a></li>
+                        <li><a href="https://github.com/kurema/forkedLetMeSee">letmesee (フォーク)</a></li>
+                        <li><a href="https://github.com/kurema/RhinoArchitecturalLibrary">RhinoArchitecturalLibrary</a>
+                        </li>
+                        <li><a href="https://github.com/kurema/MacDicConversion">MacDicConversion</a></li>
+                        <li><a href="https://github.com/kurema/Evolution3d">Evolution3d</a></li>
+                    </ul>
+                </div>
+                <div class="ac-gf-directory-column">
+                    <h3>Kindle</h3>
+                    <ul>
+                        <li><a href="https://www.amazon.co.jp/gp/product/B077G3J5TJ/tag=kurema05-22">倫理と哲学のトピック</a></li>
+                        <li><a href="https://www.amazon.co.jp/gp/product/B077XRMFWX/tag=kurema05-22">電卓 (2桁表示)</a></li>
+                        <li><a href="https://www.amazon.co.jp/gp/product/B07859JMHN/tag=kurema05-22">2017年投稿履歴</a></li>
+                    </ul>
+                </div>
+                <div class="ac-gf-directory-column">
+                    <h3>フォロー</h3>
+                    <ul>
+                        <li><a href="https://github.com/kurema/">GitHub</a></li>
+                        <li><a href="https://twitter.com/kurema_makoto/">Twitter</a></li>
+                        <li><a href="https://qiita.com/kurema/">Qiita</a></li>
+                        <li><a href="https://www.amazon.co.jp/-/e/B077X71C4C/tag=kurema05-22">Kindle</a></li>
+                    </ul>
+                    <h3>支援</h3>
+                    <ul>
+                        <li><a href="https://github.com/sponsors/kurema">GitHub Sponsors</a></li>
+                        <li><a
+                                href="https://www.amazon.co.jp/registry/wishlist/2V4H9YB1CV3PV/tag=kurema05-22">ほしい物リスト</a>
+                        </li>
+                        <li><a
+                                href="https://github.com/kurema/kurema/blob/master/introduction.ja-jp.md#cryptocurrency">暗号資産</a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         </div>
