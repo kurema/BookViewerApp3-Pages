@@ -348,7 +348,7 @@
             background-color: #fff;
             border-radius: var(--card-border-radius);
             min-height: 780px;
-            padding: var(--card-padding);
+            padding: min(var(--card-padding), 6vw);
         }
 
         .grid-card h3 {
@@ -372,18 +372,18 @@
         }
 
         .grid-card.card-blue {
-            background: linear-gradient(150deg, #39d 10%, #87f 100%);
+            background: linear-gradient(150deg, #2888c8 10%, #87f 100%);
         }
 
-        .grid-card.card-blue h3 {
+        .grid-card.card-white-text h3 {
             color: white;
         }
 
-        .grid-card.card-blue p {
+        .grid-card.card-white-text p {
             color: white;
         }
 
-        .grid-card.card-blue p  a {
+        .grid-card.card-white-text p  a {
             color: white;
         }
 
@@ -401,7 +401,8 @@
         }
 
         #ac-globalfooter .ac-gf-content {
-            padding: 0 22px;
+            padding-top:30px;
+            padding-bottom:30px;
             padding-left: calc(max(22px, env(safe-area-inset-left)));
             padding-right: calc(max(22px, env(safe-area-inset-right)));
             max-width: 980px;
@@ -415,13 +416,12 @@
         }
 
         #ac-globalfooter .ac-gf-directory-column {
-            margin-top: 30px;
-            flex-basis: 25%;
-            font-size: 12px;
+            flex-basis: min( 25%,25vw);
+            font-size: min(12px, calc(12 * var(--vw-per-px)));
         }
 
         #ac-globalfooter .ac-gf-directory-column h3 {
-            font-size: 12px;
+            font-size: min(12px, calc(12 * var(--vw-per-px)));
             font-weight: 600;
         }
 
@@ -443,7 +443,7 @@
     <style>
         #card-github-img {
             width: 100%;
-            max-height: 400px;
+            max-height: 500px;
             object-fit: cover;
             animation: card-github-img-animation 8s cubic-bezier(0.2, 0, 1, 0.5) 0s infinite normal both running;
         }
@@ -473,7 +473,7 @@
         #card-support-icon {
             animation: card-support-icon-animation 4s ease 0s infinite normal both running;
             margin: auto;
-            font-size: min(140px, 30vw);
+            font-size: min(140px, calc(140 * var(--vw-per-px)));
             user-select: none;
         }
 
@@ -576,6 +576,21 @@
                     allowfullscreen></iframe>
             </div>
             <div class="grid-container">
+                <section class="grid-card" style="grid-column:span 8;">
+                    <h3>高機能ビュワー</h3>
+                    <p>美しいビュワーで本を読みましょう。<br />
+                        PDF・CBZ・CBR・CB7に対応した電子書籍は
+                    </p>
+                </section>
+                <section class="grid-card card-blue card-white-text" style="grid-column:span 4;">
+                    <h3>EPUBビュワー内蔵</h3>
+                    <p>標準ビュワーに加え、EPUBビュワーを内蔵しました。<br />
+                        高評価の国産ビュワーBibiの他、Epub.js Readerも搭載し、設定から選択できます。<br />
+                        Explorerや内蔵ファイラーから簡単にEPUBファイルを開けます。
+                    </p>
+                    <p><a href="https://bibi.epub.link/">Bibi</a></p>
+                    <p><a href="https://github.com/futurepress/epubjs-reader">Epub.js Reader</a></p>
+                </section>
                 <section class="grid-card" style="grid-column:span 6;">
                     <h3>オープンソース</h3>
                     <p>BookViewer 3はオープンソースで開発されています。<br />
