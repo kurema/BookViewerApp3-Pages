@@ -383,7 +383,7 @@
             color: white;
         }
 
-        .grid-card.card-white-text p  a {
+        .grid-card.card-white-text p a {
             color: white;
         }
 
@@ -401,8 +401,8 @@
         }
 
         #ac-globalfooter .ac-gf-content {
-            padding-top:30px;
-            padding-bottom:30px;
+            padding-top: 30px;
+            padding-bottom: 30px;
             padding-left: calc(max(22px, env(safe-area-inset-left)));
             padding-right: calc(max(22px, env(safe-area-inset-right)));
             max-width: 980px;
@@ -416,7 +416,7 @@
         }
 
         #ac-globalfooter .ac-gf-directory-column {
-            flex-basis: min( 25%,25vw);
+            flex-basis: min(25%, 25vw);
             font-size: min(12px, calc(12 * var(--vw-per-px)));
         }
 
@@ -497,7 +497,19 @@
             100% {
                 transform: none;
             }
+        }
 
+        #card-explorer {
+            background-image: url('img/pexels-folder.webp');
+            background-size: cover;
+        }
+
+        #card-explorer img {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            backdrop-filter: blur(2vw);
+            background-color: rgba(255, 255, 255, 0.4);
         }
     </style>
 </head>
@@ -590,6 +602,16 @@
                     </p>
                     <p><a href="https://bibi.epub.link/">Bibi</a></p>
                     <p><a href="https://github.com/futurepress/epubjs-reader">Epub.js Reader</a></p>
+                </section>
+                <section id="card-explorer" class="grid-card card-white-text" style="grid-column: span 5;">
+                    <h3>ファイラー内蔵</h3>
+                    <p>お気に入りのフォルダを登録、複数のフォルダをまとめてライブラリにしましょう。<br />
+                    Explorerと同様の直観的な操作が可能です。</p>
+
+                    <!-- 特に意味のないライオン -->
+                    <img src="img/explorer.svg" />
+                </section>
+                <section class="grid-card" style="grid-column:span 7;">
                 </section>
                 <section class="grid-card" style="grid-column:span 6;">
                     <h3>オープンソース</h3>
