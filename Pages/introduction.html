@@ -57,7 +57,7 @@
             user-select: none;
         }
 
-        #ac-globalnav > .ac-gn-content {
+        #ac-globalnav>.ac-gn-content {
             padding-left: calc(max(22px, env(safe-area-inset-left)));
             padding-right: calc(max(22px, env(safe-area-inset-right)));
 
@@ -85,7 +85,7 @@
             box-sizing: content-box;
         }
 
-        #ac-globalnav .ac-gn-list > li {
+        #ac-globalnav .ac-gn-list>li {
             box-sizing: border-box;
             display: inline-block;
             position: relative;
@@ -96,7 +96,7 @@
             box-sizing: content-box;
         }
 
-        #ac-globalnav .ac-gn-list > li a {
+        #ac-globalnav .ac-gn-list>li a {
             display: inline-block;
             line-height: 22px;
             white-space: nowrap;
@@ -105,11 +105,11 @@
             opacity: 0.85;
         }
 
-        #ac-globalnav .ac-gn-list > li.selected a {
+        #ac-globalnav .ac-gn-list>li.selected a {
             opacity: 0.6;
         }
 
-        #ac-globalnav .ac-gn-list > li a:hover {
+        #ac-globalnav .ac-gn-list>li a:hover {
             opacity: 1.0;
         }
 
@@ -152,7 +152,7 @@
         }
 
 
-        #ac-localnav > .ac-ln-wrapper {
+        #ac-localnav>.ac-ln-wrapper {
             position: absolute;
             top: 0;
             left: 0;
@@ -201,14 +201,14 @@
             list-style: none;
         }
 
-        #ac-localnav .ac-ln-list > li {
+        #ac-localnav .ac-ln-list>li {
             margin-left: 24px;
             float: left;
             list-style: none;
             color: black;
         }
 
-        #ac-localnav.ac-localnav-dark .ac-ln-list > li {
+        #ac-localnav.ac-localnav-dark .ac-ln-list>li {
             color: white;
         }
 
@@ -251,7 +251,7 @@
             background: radial-gradient(circle, #fff, #ccc);
         }
 
-        main > section.section-hero {
+        main>section.section-hero {
             margin-top: calc(-1 * (var(--localnav-height) + var(--localnav-border-height)));
             margin-bottom: calc(-1 * (var(--localnav-height) + var(--localnav-border-height)));
             padding: 0;
@@ -261,32 +261,32 @@
             padding-bottom: 80px;
         }
 
-        main > section.section-hero img.section-hero-superhero {
+        main>section.section-hero img.section-hero-superhero {
             max-width: min(920px, 90vw);
             margin: 200px auto 80px auto;
         }
 
-        main > section.section-hero .intro-text {
+        main>section.section-hero .intro-text {
             color: white;
             filter: drop-shadow(0 0 10px rgba(0, 0, 0, 80%));
         }
 
-        main > section.section-hero .intro-text > h2 {
+        main>section.section-hero .intro-text>h2 {
             font-size: min(28px, calc(var(--vw-per-px) * 28));
         }
 
-        main section.section-hero .intro-text > h1 {
+        main section.section-hero .intro-text>h1 {
             font-size: min(80px, calc(80 * var(--vw-per-px)));
             margin-top: 27px;
             margin-bottom: 0;
         }
 
-        main section.section-hero .intro-text > .intro-text-body {
+        main section.section-hero .intro-text>.intro-text-body {
             font-size: min(28px, calc(28 * var(--vw-per-px)));
             margin: 20px 0 29px;
         }
 
-        main section.section-hero .intro-text > .intro-text-download-link > a {
+        main section.section-hero .intro-text>.intro-text-download-link>a {
             color: #29ff97;
             font-size: min(28px, calc(28 * var(--vw-per-px)));
         }
@@ -302,13 +302,13 @@
             padding-bottom: 60px;
         }
 
-        article > header {
+        article>header {
             max-width: 980px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .section-info > header > h2 {
+        .section-info>header>h2 {
             color: #622aff;
         }
 
@@ -321,12 +321,12 @@
             }
         }
 
-        .section-info-viewer > header > h2 {
+        .section-info-viewer>header>h2 {
             color: #0e90db;
         }
 
         @supports (background-clip: text) or (-webkit-background-clip: text) {
-            .section-info-viewer > header > h2 {
+            .section-info-viewer>header>h2 {
                 background: radial-gradient(circle, #0e90db, #1075af);
                 background-clip: text;
                 -webkit-background-clip: text;
@@ -334,13 +334,13 @@
             }
         }
 
-        article > header > h2 {
+        article>header>h2 {
             font-size: min(64px, calc(64 * var(--vw-per-px)));
             font-weight: 600;
             margin: 0;
         }
 
-        article > header > p {
+        article>header>p {
             font-size: min(24px, calc(24 * var(--vw-per-px)));
             font-weight: 600;
             letter-spacing: .009em;
@@ -378,7 +378,7 @@
             padding: min(var(--card-padding), 6vw);
         }
 
-        .grid-card > h3 {
+        .grid-card>h3 {
             color: #0e90db;
             font-size: min(21px, calc(21 * var(--vw-per-px)));
             font-weight: 600;
@@ -387,14 +387,14 @@
             margin-bottom: 5px;
         }
 
-        .grid-card > p {
+        .grid-card>p {
             color: black;
             font-size: min(16.5px, calc(16.5 * var(--vw-per-px)));
             font-weight: 800;
             margin-top: 5px;
         }
 
-        .grid-card > p a {
+        .grid-card>p a {
             color: #0e90db;
         }
 
@@ -402,19 +402,19 @@
             background: linear-gradient(150deg, #2888c8 10%, #87f 100%);
         }
 
-        .grid-card.card-white-text > h3 {
+        .grid-card.card-white-text>h3 {
             color: white;
         }
 
-        .grid-card.card-white-text > p {
+        .grid-card.card-white-text>p {
             color: white;
         }
 
-        .grid-card.card-white-text > p a {
+        .grid-card.card-white-text>p a {
             color: white;
         }
 
-        .grid-card > p a::after {
+        .grid-card>p a::after {
             content: " >";
         }
 
@@ -427,7 +427,7 @@
             z-index: 1;
         }
 
-        #ac-globalfooter > .ac-gf-content {
+        #ac-globalfooter>.ac-gf-content {
             padding-top: 30px;
             padding-bottom: 30px;
             padding-left: calc(max(22px, env(safe-area-inset-left)));
@@ -447,24 +447,35 @@
             font-size: min(12px, calc(12 * var(--vw-per-px)));
         }
 
-        #ac-globalfooter .ac-gf-directory-column > h3 {
+        #ac-globalfooter .ac-gf-directory-column>h3 {
             font-size: min(12px, calc(12 * var(--vw-per-px)));
             font-weight: 600;
         }
 
-        #ac-globalfooter .ac-gf-directory-column > ul {
+        #ac-globalfooter .ac-gf-directory-column>ul {
             margin-right: 20px;
             list-style: none;
             padding: 0;
         }
 
-        #ac-globalfooter .ac-gf-directory-column > ul > li {
+        #ac-globalfooter .ac-gf-directory-column>ul>li {
             margin-bottom: .8em;
         }
 
-        #ac-globalfooter .ac-gf-directory-column > ul > li > a {
+        #ac-globalfooter .ac-gf-directory-column>ul>li>a {
             color: #515154;
             text-decoration: none;
+        }
+
+        #ac-globalfooter .ac-gf-bottom {
+            margin-top: 7px;
+            padding-top: 8px;
+            border-top: 1px solid #d2d2d7;
+        }
+
+        #ac-globalfooter .ac-gf-bottom .ac-gf-copyright {
+            color: #515154;
+            font-size: min(12px, calc(12 * var(--vw-per-px)));
         }
     </style>
     <style>
@@ -631,7 +642,11 @@
         <article class="section-info-grid">
             <div class="grid-container">
                 <section class="grid-card" style="grid-column:span 8;">
-                    <h3>タブオペレーション</h3>
+                    <h3>タブ</h3>
+                    <p>ブラウザもファイラーもビュワーも、自由自在にタブを切り替え。<br />
+                        複数の本やサイトを同時に開けます。<br />
+                        別のウィンドウに分割することだってできます。
+                    </p>
 
                 </section>
                 <section class="grid-card card-blue card-white-text" style="grid-column:span 4;">
@@ -655,7 +670,9 @@
                 </section>
                 <section class="grid-card" style="grid-column:span 7;">
                     <h3>ブラウザ搭載</h3>
-                    <p>電子書籍ストアで本を読むにもBookViewer 3がおすすめです。</p>
+                    <p>ローカルの書籍だけでなく、ストアの本も読みましょう。<br />
+                        全ての読書体験をアプリ一つで。<br />
+                        ダウンロードした本をアプリ内で直接開けます。</p>
                 </section>
                 <section class="grid-card" style="grid-column:span 6;">
                     <h3>オープンソース</h3>
@@ -686,7 +703,7 @@
                     <p><a
                             href="https://github.com/kurema/kurema/blob/master/introduction.ja-jp.md#cryptocurrency">暗号資産</a>
                     </p>
-                    <div id="card-support-icon">🎁</div>
+                    <div id="card-support-icon"><!-- &#x1f4b8; -->&#x1f381;</div>
                 </section>
             </div>
         </article>
@@ -765,6 +782,9 @@
                         </li>
                     </ul>
                 </div>
+            </nav>
+            <nav class="ac-gf-bottom">
+                <p class="ac-gf-copyright">このサイトはCC0でライセンスされています。</p>
             </nav>
         </div>
     </footer>
