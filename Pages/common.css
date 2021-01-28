@@ -122,12 +122,13 @@ a:visited,
 }
 
 #ac-localnav {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.7);
     border-bottom: rgba(30, 30, 30, 0.4) solid 1px;
+    backdrop-filter: blur(1vw);
 }
 
 #ac-localnav.ac-localnav-dark {
-    background-color: rgba(30, 30, 30, 0.9);
+    background-color: rgba(30, 30, 30, 0.7);
     border-bottom: rgba(255, 255, 255, 0.4) solid 1px;
 }
 
@@ -277,7 +278,8 @@ main section.section-hero .intro-text>h1 {
 
 main section.section-hero .intro-text>.intro-text-body {
     font-size: min(28px, calc(28 * var(--vw-per-px)));
-    margin: 20px 0 29px;
+    margin: 20px auto 29px auto;
+    max-width: min(90vw, 920px);
 }
 
 main section.section-hero .intro-text>.intro-text-download-link>a {
