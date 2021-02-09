@@ -26,8 +26,8 @@ jobs:
 
       - name: Copy
         run: |
-          rm -rf target/*
-          cp -r main/Pages/* target
+          #rm -rf target/*
+          cp -rf main/Pages/* target
           
       - name: Push
         working-directory: ./target
