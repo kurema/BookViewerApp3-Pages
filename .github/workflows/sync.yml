@@ -21,8 +21,15 @@ jobs:
           ref: gh-pages
           path: target
           repository: kurema/BookViewerApp3
-      - run: |
-          cd target
-          ls -lah
+      - name: Copy
+        run: |
+          rm -rf target/*
+          cp -r main/Pages/* target
+      - name: Push
+        working-directory: ./target
+        run: |
           git config user.name github-actions
-          git config user.email github-actions@github.com          
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "sync"
+          git push
