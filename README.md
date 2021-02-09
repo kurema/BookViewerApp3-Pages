@@ -7,7 +7,7 @@ The content here is pushed to gh-pages branch of kurema/BookViewerApp3 using Git
 The license of all contents is CC0 which is basically public domain.
 
 ## Supported browsers
-Latest Chrome works fine, FireFox has a tiny issue (`backdrop-filter` does not work in Feb 2021), Edge (including built-in browser of BookViewer 3) is terrible. WinUI 3.0 with WebView2 should be fine, which future release of BookViewer 3 use.
+Latest Chrome and Chromium Edge works fine, FireFox has a tiny issue (`backdrop-filter` does not work in Feb 2021), Edge (including built-in browser of BookViewer 3) is terrible. WinUI 3.0 with WebView2 should be fine, which future release of BookViewer 3 will use.
 
 ## Screenshot
 You can just [visit](https://kurema.github.io/BookViewerApp3/introduction.en.html).
