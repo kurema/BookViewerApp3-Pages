@@ -21,6 +21,7 @@ jobs:
           ref: gh-pages
           path: target
           repository: kurema/BookViewerApp3
+          token: ${{ secrets.GitHub_PAT }}
       - name: Copy
         run: |
           rm -rf target/*
