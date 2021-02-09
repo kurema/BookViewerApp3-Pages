@@ -1,5 +1,5 @@
 # BookViewerApp3-Pages
-Separate repository for fruity [introduction page](https://kurema.github.io/BookViewerApp3/introduction.en.html) of [BookViewer 3](https://github.com/kurema/BookViewerApp3). 
+Separate repository for the fruity [introduction page](https://kurema.github.io/BookViewerApp3/introduction.en.html) of [BookViewer 3](https://github.com/kurema/BookViewerApp3). 
 
 The content here is pushed to gh-pages branch of kurema/BookViewerApp3 using GitHub Actions [workflow](.github/workflows/sync.yml).
 
